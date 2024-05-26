@@ -1,15 +1,16 @@
-* {
-  /* padding: 0;
-  margin: 0;
-  box-sizing: border-box; */
-}
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@100..900&display=swap");
 
-body {
-  background-color: #1e242b;
-  color: whitesmoke;
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  /* background-color: #1e242b; */
+  /* color: whitesmoke; */
+  background-color: whitesmoke;
+  color: black;
 }
 
 /* Styling header*/
@@ -83,6 +84,7 @@ button a {
   border-radius: 2px;
   width: 150px;
   background-color: #0cb8a9;
+  cursor: pointer;
 }
 
 .purchase {
@@ -105,16 +107,44 @@ input:hover {
 
 /*styling offer link*/
 .offer-div {
-  float: right;
+  margin-left: 80em;
+  padding-top: 25px;
 }
 
 .mm4 {
   list-style-type: none;
-  font-family: "gill sans";
+  font-family: "Anton", sans-serif;
   font-size: 20px;
   text-transform: bold;
   color: #0cc0df;
+  /* top: 50%;
+  left: 20%; */
+  /* transform: translate(-50%, -10%) scale(3, 1.2); */
 }
 
 @media screen and (max-width: 600px) {
+  .navdiv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mm3 a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .offer-div {
+    margin-left: 0;
+    padding-top: 10px;
+  }
+
+  .purchase-a {
+    width: 100%;
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
