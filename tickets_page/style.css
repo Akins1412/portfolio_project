@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@100..900&family=Six+Caps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   padding: 0;
@@ -9,8 +11,8 @@
 body {
   /* background-color: #1e242b; */
   /* color: whitesmoke; */
-  background-color: whitesmoke;
-  color: black;
+  background-color: #1e242b;
+  color: whitesmoke;
 }
 
 /* Styling header*/
@@ -109,6 +111,7 @@ input:hover {
 .offer-div {
   margin-left: 80em;
   padding-top: 25px;
+  letter-spacing: 4px;
 }
 
 .mm4 {
@@ -117,34 +120,102 @@ input:hover {
   font-size: 20px;
   text-transform: bold;
   color: #0cc0df;
-  /* top: 50%;
-  left: 20%; */
-  /* transform: translate(-50%, -10%) scale(3, 1.2); */
 }
 
-@media screen and (max-width: 600px) {
-  .navdiv {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* styling discounts */
+.discount {
+  position: absolute;
+  margin-top: 40px;
+  margin-right: 70em;
+  margin-left: 65px;
+  display: flex;
+  align-items: flex-start;
+  flex: initial;
+  color: whitesmoke;
+  gap: 5px;
+}
 
-  .mm3 a {
-    display: block;
-    margin: 10px 0;
-  }
+.num1 {
+  position: relative;
+  font-size: 120px;
+  font-family: "Six Caps", sans-serif;
+  padding-left: 10px;
+}
 
-  .offer-div {
-    margin-left: 0;
-    padding-top: 10px;
-  }
+.num2 {
+  position: relative;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* color: #0cc0df; */
+  margin-top: 20%;
+  font-size: 40px;
+}
 
-  .purchase-a {
-    width: 100%;
-    text-align: center;
-  }
+.percentage {
+  width: 100px;
+}
 
-  input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+.num3 span {
+  color: #40dfaf;
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 25px;
+}
+
+.num3 {
+  font-size: 15px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/*.img-container {
+  position: absolute;
+  display: flex;
+  padding: 4px;
+} */
+
+.movie1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/*  styling first movie cards */
+div.selector {
+  margin-left: 40px;
+  /* float: left; */
+  padding: 3px;
+  display: flex;
+  gap: 4rem;
+  width: 60em;
+}
+
+div.image {
+  height: auto;
+  width: 900px;
+}
+
+div.movie1 {
+  padding-left: 30px;
+}
+
+div.mov1 {
+  text-align: center;
+  padding: 15px;
+}
+
+/* featured movies */
+h2.fmovies {
+  text-align: center;
+  letter-spacing: 7px;
+  font-size: 30px;
+}
+
+div.mmo1 {
+  margin: 5px;
+  float: left;
+  width: 180px;
 }
