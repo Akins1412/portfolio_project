@@ -219,3 +219,17 @@ section {
   display: flex;
   padding: 16px;
 }
+
+img.nmovies {
+  border: white 8px solid;
+  border-radius: 50px;
+  /* width: 20em; */
+  height: fit-content;
+  width: 400px;
+  margin-left: 40px;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 29px;
+}
