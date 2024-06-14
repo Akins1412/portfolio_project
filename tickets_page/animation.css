@@ -1,0 +1,79 @@
+/* 
+****************
+ANIMATIONS SECTION
+****************
+*/
+
+
+/* 
+****************
+GLICTH 
+****************
+*/
+
+
+@keyframes glitch {
+    0% {
+      text-shadow: 0.2em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    15% {
+      text-shadow: 0.2em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    16% {
+      text-shadow: -0.2em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.2em -0.2em 0 #fffc00;
+    }
+    49% {
+      text-shadow: -0.2em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.2em -0.2em 0 #fffc00;
+    }
+    50% {
+      text-shadow: 0.2em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    99% {
+      text-shadow: 0.2em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    100% {
+      text-shadow: -0.2em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+        -0.04em -0.025em 0 #fffc00;
+    }
+  }
+  
+
+
+
+  @keyframes glitch2{
+    0% {
+      text-shadow: 0.1em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    15% {
+      text-shadow: 0.1em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+        0.025em 0.04em 0 #fffc00;
+    }
+    16% {
+      text-shadow: -0.1em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.1em -0.1em 0 #fffc00;
+    }
+    49% {
+      text-shadow: -0.1em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+        -0.1em -0.1em 0 #fffc00;
+    }
+    50% {
+      text-shadow: 0.1em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    99% {
+      text-shadow: 0.1em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+        0 -0.04em 0 #fffc00;
+    }
+    100% {
+      text-shadow: -0.1em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+        -0.04em -0.025em 0 #fffc00;
+    }
+  }
+  

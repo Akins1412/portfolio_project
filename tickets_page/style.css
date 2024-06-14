@@ -11,225 +11,201 @@
 body {
   /* background-color: #1e242b; */
   /* color: whitesmoke; */
-  background-color: #1e242b;
+  background-color: whitesmoke;
+  color: black;
+  font-family: Geologica;
+}
+/* 
+********************
+  UTILITY STYLES
+***********************
+*/
+a{
+  text-decoration: none;
   color: whitesmoke;
 }
+li{
+  list-style: none;
+}
 
-/* Styling header*/
-.logo a {
+img{
+  width: 100%;
+}
+/* main{
+  padding-left: 15px ;
+  padding-right: 15px;
+} */
+/*
+********************************
+  STYLING HEADER SECTION
+**********************************
+*/
+.logo span {
   font-size: 35px;
   font-weight: 600;
   color: whitesmoke;
-  text-decoration: none;
+}
+.extra-link a:hover{
+  border-bottom: 2px solid whitesmoke;
 }
 
 .navbar {
   background: #1e242b;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 10px 15px 10px 15px;
 }
 
 .navdiv {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* border: 2px solid red; */
 }
-
-.listed {
-  list-style-type: none;
-  margin: 0;
-  /* padding: 2px 5px; */
-  height: 4em;
+.extra-link{
+  /* border: 2px solid green; */
+  padding: 7px;
 }
-
-.mm3 {
-  list-style-type: none;
-  display: inline-block;
-  text-decoration: none;
-  padding-top: 20px;
-}
-
-.mm3 a {
-  color: whitesmoke;
-  font-size: 18px;
+.extra-link > a{
+  font-size: 1.3rem;
+  margin-left: 15px;
   font-weight: bold;
-  margin-right: 25px;
-  text-decoration: none;
+  
 }
+.extra-link .ticket-btn{
+  background-color: #1a6e67;
+  padding: 5px;
+  outline: 2px solid whitesmoke ;
+  outline-offset: 2px;
+  color: white;
 
-/*Styling buy ticket*/
-/* button {
-  background-color: #0cb8a9;
-  margin-left: 10px;
-  border-radius: 3px;
-  padding: 10px;
-  width: 8;
-  text-decoration: none;
+} 
+.extra-link .ticket-btn:hover{
+  background: #1e242b;
+  outline-color: aqua;
+  border-bottom: 0;
 }
-
-button a {
-  color: whitesmoke;
-  font-weight: normal;
-  font-size: 15px;
-} */
-
-.purchase-a {
-  color: whitesmoke;
-  text-decoration: none;
-}
-
-.purchase-a:link {
-  color: whitesmoke;
-  text-decoration: none;
-  text-align: center;
-  padding: 9px 25px;
-  border-radius: 2px;
-  width: 150px;
-  background-color: #0cb8a9;
-  cursor: pointer;
-}
-
-.purchase {
-  border-radius: 3px;
-  background-color: #0cb8a9;
-  border: 1px solid #0cb8a9;
-}
-
-/*Syling search bar*/
+/*
+********************************
+STYLING SEARCH BAR
+**********************************
+*/
 input {
   border-radius: 20px;
-  height: 1.5em;
-  padding: 5px;
+  width: 250px;
+  padding: 7px;
+  border: none;
 }
-
-input:hover {
-  text-decoration: none;
-  background-color: none;
+.container1{
+  position: relative;
+  background: url("./images/background.jpg");
+  height : calc(100vh - 60px);
+  background-position: center;
+  background-size: cover;
+  padding: 0 15px 0 15px;
+  background-repeat: no-repeat;
+  color: white;
+  overflow: hidden;
 }
-
-/*styling offer link*/
-.offer-div {
-  margin-left: 80em;
-  padding-top: 25px;
-  letter-spacing: 4px;
-}
-
-.mm4 {
-  list-style-type: none;
-  font-family: "Anton", sans-serif;
-  font-size: 20px;
-  text-transform: bold;
-  color: #0cc0df;
-}
-
-/* styling discounts */
-.discount {
+.container1 .offer-div {
   position: absolute;
-  margin-top: 40px;
-  margin-right: 70em;
-  margin-left: 65px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family: 'Geologica', sans-serif;
+  right: 100px;
+  letter-spacing: 5px;
+  top: 50px;
+  /* float: right;
+  overflow: auto; */
+}
+.offer-div ul{
+  /* text-shadow: 0.2em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00; */
+  animation: glitch 725ms infinite;
+}
+.offer-div .limited-offer{
+  color: transparent;
+  letter-spacing: 15px;
+  -webkit-text-stroke: 1px aqua;
+  animation: glitch 500ms infinite;
+}
+.offer-div h2:nth-child(3){
+  color: aqua;
+}
+.discount{
+  /* border: 2px solid red; */
+  position: absolute;
+  color: white;
+  bottom: 300px;
+  left: 50px;
   display: flex;
-  align-items: flex-start;
-  flex: initial;
-  color: whitesmoke;
-  gap: 5px;
-}
+  animation: glitch2 500ms infinite;
 
-.num1 {
-  position: relative;
-  font-size: 120px;
-  font-family: "Six Caps", sans-serif;
-  padding-left: 10px;
 }
-
-.num2 {
-  position: relative;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  /* color: #0cc0df; */
-  margin-top: 20%;
-  font-size: 40px;
+.discount .num1{
+  font-family: Barlow ;
+  /* border: 2px solid green; */
+  font-size: 5rem;
 }
-
 .percentage {
-  width: 100px;
+  margin-left: 10px;
 }
 
-.num3 span {
-  color: #40dfaf;
+.percentage .num2 {
+  font-size: 2rem;
+}
+.percentage .num3 span{
+  color: aqua;
+  font-size: 1.5rem;
+  font-weight: 900;
   display: block;
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 25px;
 }
 
-.num3 {
-  font-size: 15px;
-}
 
-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-}
+/* 
+**********
+ MOIVE LIST STYLING
+**********
+*/
 
-/*.img-container {
+.movie-list{
   position: absolute;
   display: flex;
-  padding: 4px;
-} */
-
-.movie1 {
-  width: 200px;
-  height: 200px;
+  gap: 25px;
+  text-align: center;
+  bottom: 30px;
+  /* opacity: 0.1; */
+  /* border: 2px solid green; */
+}
+.movie-list img{
   border-radius: 10px;
+  width: 200px;
 }
 
-/*  styling first movie cards */
-div.selector {
-  margin-left: 40px;
-  /* float: left; */
-  padding: 3px;
+.movie-list .mmo1:hover{
+  transform: scale(1.1);
+}
+
+
+/* 
+*********************
+FEATURED MOVIES
+**********************
+ */
+
+.movie-group{
+  background-color: #1e242b;
+  padding: 20px ;
+}
+.movie-group h2{
+  text-align: center;
+  color: whitesmoke;
+  font-size: 2.5rem;
+
+}
+.card-container{
   display: flex;
-  gap: 4rem;
-  width: 60em;
-}
-
-div.image {
-  height: auto;
-  width: 900px;
-}
-
-div.movie1 {
-  padding-left: 30px;
-}
-
-div.mov1 {
+  /* border: 2px solid red; */
+  gap: 20px;
   text-align: center;
-  padding: 15px;
-}
-
-/* featured movies */
-h2.fmovies {
-  text-align: center;
-  letter-spacing: 7px;
-  font-size: 30px;
-}
-
-/* styling new movies */
-section {
-  display: flex;
-  padding: 16px;
-}
-
-img.nmovies {
-  border: white 8px solid;
-  border-radius: 50px;
-  /* width: 20em; */
-  height: fit-content;
-  width: 400px;
-  margin-left: 40px;
-}
-
-figcaption {
-  text-align: center;
-  font-size: 29px;
+  color: white;
+  padding: 5px;
 }
