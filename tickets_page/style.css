@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* background-color: #1e242b; */
 }
 
 body {
@@ -20,15 +21,15 @@ body {
   UTILITY STYLES
 ***********************
 */
-a{
+a {
   text-decoration: none;
   color: whitesmoke;
 }
-li{
+li {
   list-style: none;
 }
 
-img{
+img {
   width: 100%;
 }
 /* main{
@@ -45,7 +46,7 @@ img{
   font-weight: 600;
   color: whitesmoke;
 }
-.extra-link a:hover{
+.extra-link a:hover {
   border-bottom: 2px solid whitesmoke;
 }
 
@@ -60,25 +61,23 @@ img{
   justify-content: space-between;
   /* border: 2px solid red; */
 }
-.extra-link{
+.extra-link {
   /* border: 2px solid green; */
   padding: 7px;
 }
-.extra-link > a{
+.extra-link > a {
   font-size: 1.3rem;
   margin-left: 15px;
   font-weight: bold;
-  
 }
-.extra-link .ticket-btn{
+.extra-link .ticket-btn {
   background-color: #1a6e67;
   padding: 5px;
-  outline: 2px solid whitesmoke ;
+  outline: 2px solid whitesmoke;
   outline-offset: 2px;
   color: white;
-
-} 
-.extra-link .ticket-btn:hover{
+}
+.extra-link .ticket-btn:hover {
   background: #1e242b;
   outline-color: aqua;
   border-bottom: 0;
@@ -94,10 +93,10 @@ input {
   padding: 7px;
   border: none;
 }
-.container1{
+.container1 {
   position: relative;
   background: url("./images/background.jpg");
-  height : calc(100vh - 60px);
+  height: calc(100vh - 60px);
   background-position: center;
   background-size: cover;
   padding: 0 15px 0 15px;
@@ -109,28 +108,28 @@ input {
   position: absolute;
   font-size: 1.2rem;
   font-weight: 900;
-  font-family: 'Geologica', sans-serif;
+  font-family: "Geologica", sans-serif;
   right: 100px;
   letter-spacing: 5px;
   top: 50px;
   /* float: right;
   overflow: auto; */
 }
-.offer-div ul{
+.offer-div ul {
   /* text-shadow: 0.2em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00; */
   animation: glitch 725ms infinite;
 }
-.offer-div .limited-offer{
+.offer-div .limited-offer {
   color: transparent;
   letter-spacing: 15px;
   -webkit-text-stroke: 1px aqua;
   animation: glitch 500ms infinite;
 }
-.offer-div h2:nth-child(3){
+.offer-div h2:nth-child(3) {
   color: aqua;
 }
-.discount{
+.discount {
   /* border: 2px solid red; */
   position: absolute;
   color: white;
@@ -138,10 +137,9 @@ input {
   left: 50px;
   display: flex;
   animation: glitch2 500ms infinite;
-
 }
-.discount .num1{
-  font-family: Barlow ;
+.discount .num1 {
+  font-family: Barlow;
   /* border: 2px solid green; */
   font-size: 5rem;
 }
@@ -152,13 +150,12 @@ input {
 .percentage .num2 {
   font-size: 2rem;
 }
-.percentage .num3 span{
+.percentage .num3 span {
   color: aqua;
   font-size: 1.5rem;
   font-weight: 900;
   display: block;
 }
-
 
 /* 
 **********
@@ -166,7 +163,7 @@ input {
 **********
 */
 
-.movie-list{
+.movie-list {
   position: absolute;
   display: flex;
   gap: 25px;
@@ -174,16 +171,16 @@ input {
   bottom: 30px;
   /* opacity: 0.1; */
   /* border: 2px solid green; */
+  margin: 28px;
 }
-.movie-list img{
+.movie-list img {
   border-radius: 10px;
   width: 200px;
 }
 
-.movie-list .mmo1:hover{
+.movie-list .mmo1:hover {
   transform: scale(1.1);
 }
-
 
 /* 
 *********************
@@ -191,21 +188,86 @@ FEATURED MOVIES
 **********************
  */
 
-.movie-group{
+.movie-group {
   background-color: #1e242b;
-  padding: 20px ;
+  padding: 20px;
 }
-.movie-group h2{
+.movie-group h2 {
   text-align: center;
   color: whitesmoke;
   font-size: 2.5rem;
-
 }
-.card-container{
+.card-container {
   display: flex;
   /* border: 2px solid red; */
   gap: 20px;
   text-align: center;
   color: white;
   padding: 5px;
+}
+
+.latest {
+  background-color: black;
+  color: whitesmoke;
+  padding: 30px;
+}
+
+/* 
+*********************
+NOW SHOWING
+**********************
+ */
+
+.new {
+  background-color: #0cc0df;
+  padding: 9px 90px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nshowing {
+  background-color: black;
+  color: whitesmoke;
+  /* padding: 30px; */
+  display: grid;
+  grid-template-columns: 25% 20% 18% 25%;
+}
+
+.nshowing div {
+  padding: 20px;
+}
+
+.nshow {
+  height: 400px;
+  width: 280px;
+}
+
+.nshow1 {
+  height: 150px;
+  width: 200px;
+}
+
+.load {
+  background-color: black;
+  padding: 9px 45%;
+  /* color: white; */
+}
+
+.load-more {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  text-align: center;
+  outline: 5px white solid;
+  font-size: 20px;
+}
+
+footer {
+}
+
+.foott {
+  background-color: black;
+  padding: 6px;
+  margin: 0;
 }
