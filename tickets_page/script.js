@@ -11,10 +11,10 @@ searchInput.addEventListener("blur", function() {
 const ticket-Btn = document.querySelector(".ticket-btn");
 
 ticket-Btn.addEventListener("mouseover", function() {
-  this.style.backgroundColor = "#28a745"; // Change to desired hover color
+  this.style.backgroundColor = "#28a745";
 });
 
 ticket-Btn.addEventListener("mouseout", function() {
-  this.style.backgroundColor = "#1a6e67"; // Change back to original color
+  this.style.backgroundColor = "#1a6e67";
 });
 
