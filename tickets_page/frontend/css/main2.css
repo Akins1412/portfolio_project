@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  font-family: ;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 20vh; */
+  padding-top: 90px;
+  font-size: 50px;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 300px;
+  height: 297px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: 570px;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
