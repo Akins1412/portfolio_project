@@ -16,6 +16,7 @@ body {
   color: black;
   font-family: Geologica;
 }
+
 /* 
 ********************
   UTILITY STYLES
@@ -25,6 +26,7 @@ a {
   text-decoration: none;
   color: whitesmoke;
 }
+
 li {
   list-style: none;
 }
@@ -32,6 +34,7 @@ li {
 img {
   width: 100%;
 }
+
 /* main{
   padding-left: 15px ;
   padding-right: 15px;
@@ -46,6 +49,7 @@ img {
   font-weight: 600;
   color: whitesmoke;
 }
+
 .extra-link a:hover {
   border-bottom: 2px solid whitesmoke;
 }
@@ -61,15 +65,18 @@ img {
   justify-content: space-between;
   /* border: 2px solid red; */
 }
+
 .extra-link {
   /* border: 2px solid green; */
   padding: 7px;
 }
-.extra-link > a {
+
+.extra-link>a {
   font-size: 1.3rem;
   margin-left: 15px;
   font-weight: bold;
 }
+
 .extra-link .ticket-btn {
   background-color: #1a6e67;
   padding: 5px;
@@ -77,11 +84,13 @@ img {
   outline-offset: 2px;
   color: white;
 }
+
 .extra-link .ticket-btn:hover {
   background: #1e242b;
   outline-color: aqua;
   border-bottom: 0;
 }
+
 /*
 ********************************
 STYLING SEARCH BAR
@@ -93,9 +102,10 @@ input {
   padding: 7px;
   border: none;
 }
+
 .container1 {
   position: relative;
-  background: url("/tickets_page/frontend/images/background.jpg");
+  background: url("../images/background.jpg");
   height: calc(100vh - 60px);
   background-position: center;
   background-size: cover;
@@ -104,6 +114,7 @@ input {
   color: white;
   overflow: hidden;
 }
+
 .container1 .offer-div {
   position: absolute;
   font-size: 1.2rem;
@@ -115,20 +126,24 @@ input {
   /* float: right;
   overflow: auto; */
 }
+
 .offer-div ul {
   /* text-shadow: 0.2em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
     0.025em 0.04em 0 #fffc00; */
   animation: glitch 725ms infinite;
 }
+
 .offer-div .limited-offer {
   color: transparent;
   letter-spacing: 15px;
   -webkit-text-stroke: 1px aqua;
   animation: glitch 500ms infinite;
 }
+
 .offer-div h2:nth-child(3) {
   color: aqua;
 }
+
 .discount {
   /* border: 2px solid red; */
   position: absolute;
@@ -138,11 +153,13 @@ input {
   display: flex;
   animation: glitch2 500ms infinite;
 }
+
 .discount .num1 {
   font-family: Barlow;
   /* border: 2px solid green; */
   font-size: 5rem;
 }
+
 .percentage {
   margin-left: 10px;
 }
@@ -150,6 +167,7 @@ input {
 .percentage .num2 {
   font-size: 2rem;
 }
+
 .percentage .num3 span {
   color: aqua;
   font-size: 1.5rem;
@@ -173,6 +191,7 @@ input {
   /* border: 2px solid green; */
   margin: 28px;
 }
+
 .movie-list img {
   border-radius: 10px;
   width: 200px;
@@ -192,11 +211,13 @@ FEATURED MOVIES
   background-color: #1e242b;
   padding: 20px;
 }
+
 .movie-group h2 {
   text-align: center;
   color: whitesmoke;
   font-size: 2.5rem;
 }
+
 .card-container {
   display: flex;
   /* border: 2px solid red; */
@@ -231,11 +252,16 @@ NOW SHOWING
   color: whitesmoke;
   /* padding: 30px; */
   display: grid;
-  grid-template-columns: 25% 20% 18% 25%;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
 }
 
-.nshowing div {
-  padding: 20px;
+.nshowing figure {
+  margin-bottom: 10px;
+}
+
+.nshowing figure img {
+  border-radius: 10px;
 }
 
 .nshow {
@@ -243,10 +269,6 @@ NOW SHOWING
   width: 280px;
 }
 
-.nshow1 {
-  height: 150px;
-  width: 200px;
-}
 
 .load {
   background-color: black;
@@ -261,9 +283,6 @@ NOW SHOWING
   text-align: center;
   outline: 5px white solid;
   font-size: 20px;
-}
-
-footer {
 }
 
 .foott {
