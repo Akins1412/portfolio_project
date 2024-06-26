@@ -1,0 +1,24 @@
+{
+  "name": "portfolio_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Akins1412/portfolio_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akins1412/portfolio_project/issues"
+  },
+  "homepage": "https://github.com/Akins1412/portfolio_project#readme",
+  "dependencies": {
+    "@google-cloud/translate": "^8.3.0",
+    "express": "^4.19.2"
+  }
+}
