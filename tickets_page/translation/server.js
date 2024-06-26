@@ -1,25 +1,39 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const { Translate } = require('@google-cloud/translate').v2;
+// Frontend script.js for language translation integration
 
-const app = express();
-const translate = new Translate();
+document.getElementById('language-select').addEventListener('change', async (event) => {
+  const language = event.target.value;
+  const elementsToUpdate = document.querySelectorAll('[data-key]');
 
-app.use(bodyParser.json());
+  for (const element of elementsToUpdate) {
+    const key = element.getAttribute('data-key');
+    const textToTranslate = element.textContent;
 
-app.post('/translate', async (req, res) => {
-  const { text, target } = req.body;
+    try {
+      const response = await fetch('/translate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          text: textToTranslate,
+          target: language
+        })
+      });
 
-  try {
-    const [translation] = await translate.translate(text, target);
-    res.json({ text, translation });
-  } catch (error) {
-    res.status(500).send(error);
+      if (!response.ok) {
+        throw new Error('Translation request failed');
+      }
+
+      const data = await response.json();
+      element.textContent = data.translation;
+    } catch (error) {
+      console.error('Error fetching translations:', error);
+    }
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+document.addEventListener('DOMContentLoaded', () => {
+  const defaultLanguage = 'en';
+  document.getElementById('language-select').value = defaultLanguage;
+  document.getElementById('language-select').dispatchEvent(new Event('change'));
 });
-
