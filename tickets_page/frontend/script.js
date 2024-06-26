@@ -16,36 +16,9 @@ async function translatePage(language) {
     const translatedText = await translateText(originalText, language);
     element.textContent = translatedText;
   }
-
-  // Update placeholder text based on language
-  const searchInput = document.querySelector("input[name='search']");
-  const translatedPlaceholder = await translateText("Search Movies...", language);
-  searchInput.setAttribute('placeholder', translatedPlaceholder);
 }
 
-// Event listener for language selection
 document.getElementById('language-select').addEventListener('change', (event) => {
   const selectedLanguage = event.target.value;
   translatePage(selectedLanguage);
-});
-
-// Existing functionality
-const searchInput = document.querySelector("input[name='search']");
-
-searchInput.addEventListener("focus", function() {
-  this.placeholder = "Enter Movie Title...";
-});
-
-searchInput.addEventListener("blur", function() {
-  this.placeholder = "Search Movies...";
-});
-
-const ticketBtn = document.querySelector(".ticket-btn");
-
-ticketBtn.addEventListener("mouseover", function() {
-  this.style.backgroundColor = "#28a745";
-});
-
-ticketBtn.addEventListener("mouseout", function() {
-  this.style.backgroundColor = "#1a6e67";
 });
