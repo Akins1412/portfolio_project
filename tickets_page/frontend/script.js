@@ -1,37 +1,56 @@
-document.getElementById('language-select').addEventListener('change', async (event) => {
-  const language = event.target.value;
-  const elementsToUpdate = document.querySelectorAll('[data-key]');
+const {Translate} = require('@google-cloud/translate').v2;
+const translate = new Translate();
 
-  for (const element of elementsToUpdate) {
+async function translateText(text, targetLanguage) {
+  let [translations] = await translate.translate(text, targetLanguage);
+  translations = Array.isArray(translations) ? translations : [translations];
+  return translations[0];
+}
+
+async function translatePage(language) {
+  const elements = document.querySelectorAll('[data-key]');
+  for (const element of elements) {
     const key = element.getAttribute('data-key');
-    const textToTranslate = element.textContent;
-
-    try {
-      const response = await fetch('/translate', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          text: textToTranslate,
-          target: language
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error('Translation request failed');
-      }
-
-      const data = await response.json();
-      element.textContent = data.translation;
-    } catch (error) {
-      console.error('Error fetching translations:', error);
-    }
+    const originalText = element.textContent;
+    const translatedText = await translateText(originalText, language);
+    element.textContent = translatedText;
   }
+
+  // Update placeholder text based on language
+  const searchInput = document.querySelector("input[name='search']");
+  if (searchInput) {
+    const translatedPlaceholder = await translateText("Search Movies...", language);
+    searchInput.setAttribute('placeholder', translatedPlaceholder);
+  }
+}
+
+// Event listener for language selection
+document.getElementById('language-select').addEventListener('change', (event) => {
+  const selectedLanguage = event.target.value;
+  translatePage(selectedLanguage);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const defaultLanguage = 'en';
-  document.getElementById('language-select').value = defaultLanguage;
-  document.getElementById('language-select').dispatchEvent(new Event('change'));
-});
+// Existing functionality
+const searchInput = document.querySelector("input[name='search']");
+
+if (searchInput) {
+  searchInput.addEventListener("focus", function() {
+    this.placeholder = "Enter Movie Title...";
+  });
+
+  searchInput.addEventListener("blur", function() {
+    this.placeholder = "Search Movies...";
+  });
+}
+
+const ticketBtn = document.querySelector(".ticket-btn");
+
+if (ticketBtn) {
+  ticketBtn.addEventListener("mouseover", function() {
+    this.style.backgroundColor = "#28a745";
+  });
+
+  ticketBtn.addEventListener("mouseout", function() {
+    this.style.backgroundColor = "#1a6e67";
+  });
+}
