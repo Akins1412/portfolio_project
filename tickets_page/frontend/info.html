@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https//cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+    <nav>
+      <div class="logo" data-key="logo">FindMe</div>
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+        <option value="fr">French</option>
+        <option value="zh">Chinese</option>
+        <!-- Add more language options here -->
+      </select>
+    </nav>
+  </header>
+  
+    <div class="container">
+      <div class="info" data-key="contact-info">Contact Info</div>
+      <form action="">
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" required autocomplete="off" />
+            <div class="underline"></div>
+            <label data-key=">First Name</label>
+          </div>
+          <div class="input-data">
+            <input type="text" required autocomplete="off" />
+            <div class="underline"></div>
+            <label data-key=">Last Name</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" required autocomplete="off" />
+            <div class="underline"></div>
+            <label data-key=">Email Address</label>
+          </div>
+          <div class="input-data">
+            <input type="text" required autocomplete="off" />
+            <div class="underline"></div>
+            <label data-key=">Phone Number</label>
+          </div>
+        </div>
+        <div class="form-row submit-btn">
+          <div class="input-data">
+            <div class="inner"></div>
+            <input type="submit" value="submit" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="/tickets_page/frontend/script.js"></script>
+  </body>
+</html>

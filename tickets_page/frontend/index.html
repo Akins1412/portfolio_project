@@ -23,28 +23,36 @@
 						<!-- <button>
             <i class="fa fa-search" style="font-size: 18px"></i>
           </button> -->
-					</form>
-					<div class="extra-link">
-						<a href="#">MOVIES</a>
-						<a href="#">CINEMAS</a>
-						<a href="#">BOOKINGS</a>
-						<a href="#" class="btn ticket-btn">BUY TICKETS</a>
-					</div>
-				</div>
-			</nav>
-		</header>
+          </form>
+          <div class="extra-link">
+            <a href="#">MOVIES</a>
+            <a href="#">CINEMAS</a>
+            <a href="#">BOOKINGS</a>
+            <a href="#" class="btn ticket-btn">BUY TICKETS</a>
+          </div>
+          <select id="language-select">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="zh">Chinese</option>
+              <!-- Add more languages as needed -->
+          </select>
+        </div>
+      </nav>
+    </header>
 
-		<main>
-			<div class="container1">
-				<div class="offer-div">
-					<ul>
-						<li class="limited-offer">LIMITED OFFER</li>
-						<li class="limited-offer">LIMITED OFFER</li>
-						<li class="limited-offer">LIMITED OFFER</li>
-						<li class="limited-offer">LIMITED OFFER</li>
-						<li class="limited-offer">LIMITED OFFER</li>
-					</ul>
-				</div>
+    <main>
+      <div class="container1">
+        <div class="offer-div">
+          <ul>
+            <li class="limited-offer" data-key="limited-offer">LIMITED OFFER</li>
+            <li class="limited-offer" data-key="limited-offer">LIMITED OFFER</li>
+            <li class="limited-offer" data-key="limited-offer">LIMITED OFFER</li>
+            <li class="limited-offer" data-key="limited-offer">LIMITED OFFER</li>
+            <li class="limited-offer" data-key="limited-offer">LIMITED OFFER</li>
+          </ul>
+        </div>
 
 				<div class="discount">
 					<div class="num1">30</div>
@@ -182,7 +190,6 @@
 					</figure>
 					<figcaption>Title, release date/time movie rate(+18)</figcaption>
 				</div>
-
 				<div class="nshowing3">
 					<figure>
 						<a href="#"
@@ -209,20 +216,22 @@
 			</div>
 
 			<div class="load">
-				<a href="#">
-					<article class="load-more">
-						<em>LOAD MORE</em>
-					</article>
-				</a>
-			</div>
-		</main>
-		<footer>
-			<div class="foott">
-				<a href="#"><i class="bi bi-facebook"></i></a>
-				<a href="#"><i class="bi bi-twitter"></i></a>
-				<a href="#"><i class="bi bi-linkedin"></i></a>
-			</div>
-		</footer>
-		<script src="./script/script.js"></script>
-	</body>
+      <div class="load">
+        <a href="#">
+          <article class="load-more">
+            <em>LOAD MORE</em>
+          </article>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <div class="foott">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="server.js"></script>
+  </body>
 </html>
