@@ -105,7 +105,7 @@ input {
 
 .container1 {
   position: relative;
-  background: url("../images/background.jpg");
+  background: url("../home/images/background.jpg");
   height: calc(100vh - 60px);
   background-position: center;
   background-size: cover;

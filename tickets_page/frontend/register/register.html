@@ -4,44 +4,54 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Details</title>
-		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="main.css" />
 		<link
 			rel="stylesheet"
 			href="https//cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" />
+
+		<script src="./script/register.js" defer></script>
 	</head>
 	<body>
 		<div class="container">
-			<div class="info">Contact Info</div>
-			<form action="">
+			<div class="info">Register</div>
+			<form action="../login/login.html" method="post" class="form">
 				<div class="form-row">
 					<div class="input-data">
-						<input type="text" required autocomplete="off" />
+						<input type="text" required autocomplete="off" class="username" />
 						<div class="underline"></div>
-						<label>First Name</label>
-					</div>
-					<div class="input-data">
-						<input type="text" required autocomplete="off" />
-						<div class="underline"></div>
-						<label>Last Name</label>
+						<label>Username</label>
 					</div>
 				</div>
+
 				<div class="form-row">
 					<div class="input-data">
-						<input type="text" required autocomplete="off" />
+						<input type="email" required autocomplete="off" class="email" />
 						<div class="underline"></div>
-						<label>Email Address</label>
+						<label>Email</label>
 					</div>
+				</div>
+
+				<div class="form-row">
 					<div class="input-data">
-						<input type="text" required autocomplete="off" />
+						<input
+							type="password"
+							required
+							autocomplete="off"
+							class="password" />
 						<div class="underline"></div>
-						<label>Phone Number</label>
+						<label>password</label>
 					</div>
 				</div>
 				<div class="form-row submit-btn">
 					<div class="input-data">
 						<div class="inner"></div>
-						<input type="submit" value="submit" />
+						<input class="submit" type="submit" value="submit" />
 					</div>
+				</div>
+
+				<div class="register">
+					<h4>Have an Account</h4>
+					<a href="../login/login.html">LOGIN</a>
 				</div>
 			</form>
 		</div>

@@ -1,5 +1,4 @@
 from flask_restx import Namespace, Resource, fields
-from backend.models.movie import Movie
 from datetime import datetime
 from http import HTTPStatus
 
@@ -17,6 +16,8 @@ class Return_all_movies(Resource):
     """movie routes"""
 
     def get(self):
+        from backend.models.movie import Movie
+
         """Return all movies"""
 
         movies = Movie.query.all()
@@ -30,6 +31,8 @@ class Return_all_movies(Resource):
     """movie routes"""
 
     def get(self, movie_id):
+        from backend.models.movie import Movie
+
         """Return a movies"""
 
         movie = Movie.query.get(movie_id)
@@ -42,6 +45,8 @@ class Return_all_movies(Resource):
 class Post_movie(Resource):
     @movie_api.expect(post_movie)
     def post(self):
+        from backend.models.movie import Movie
+
         data = movie_api.payload
 
         if not data:

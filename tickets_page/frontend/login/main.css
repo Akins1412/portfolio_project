@@ -8,11 +8,19 @@
 
 body {
   background-color: lavenderblush;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
 }
 
 .container {
@@ -21,6 +29,7 @@ body {
   max-width: 800px;
   padding: 25px 40px 10px 40px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
 }
 
 .container .info {
@@ -59,8 +68,8 @@ input {
   border-bottom: 2px solid rgba(0, 0, 0, 0.12);
 }
 
-.input-data input:focus ~ label,
-.input-data input:valid ~ label {
+.input-data input:focus~label,
+.input-data input:valid~label {
   transform: translateY(-27px);
   color: #3498db;
   font-size: 14px;
@@ -88,6 +97,11 @@ input {
   background: #0cb8a9;
 }
 
+.submit-btn .input-data .inner:hover {
+  background: #105a54;
+
+}
+
 .submit-btn .input-data input {
   position: relative;
   z-index: 1.5;
@@ -101,8 +115,8 @@ input {
   cursor: pointer;
 }
 
-input:focus + label,
-input:not(:placeholder-shown) + label {
+input:focus+label,
+input:not(:placeholder-shown)+label {
   transform: translateY(-27px);
 }
 
@@ -123,4 +137,25 @@ input:not(:placeholder-shown) + label {
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 1s ease;
+}
+
+.register {
+  display: flex;
+  gap: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  text-align: center;
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  padding: 5px;
+  border-radius: 5px;
+  width: 300px;
+  margin: 10px auto;
+
 }

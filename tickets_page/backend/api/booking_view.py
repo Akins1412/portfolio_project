@@ -1,6 +1,5 @@
 from flask_restx import Namespace, Resource
 from http import HTTPStatus
-from backend.models.movie import Booking
 
 booking_api = Namespace("bookings", description="Return all bookings")
 
@@ -8,6 +7,8 @@ booking_api = Namespace("bookings", description="Return all bookings")
 @booking_api.route("/")
 class Get_Booking(Resource):
     def get(self):
+        from backend.models.movie import Booking
+
         """Return all bookings"""
         bookings = Booking.query.all()
         if not bookings:
@@ -18,6 +19,8 @@ class Get_Booking(Resource):
 @booking_api.route("/<int:booking_id>")
 class Get_Booking(Resource):
     def get(self, booking_id):
+        from backend.models.movie import Booking
+
         """Return a booking"""
         booking = Booking.query.get(booking_id)
         if not booking:

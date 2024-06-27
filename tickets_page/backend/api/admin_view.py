@@ -1,6 +1,4 @@
 from flask_restx import Namespace, Resource, fields
-from backend.models.admin_model import Admin
-from backend.models.movie import Movie
 from datetime import datetime
 
 
@@ -19,6 +17,8 @@ class Create_Admin(Resource):
 
     @admin_api.expect(admin_model)
     def post(self):
+        from backend.models.admin_model import Admin
+        from backend.models.movie import Movie
         data = admin_api.payload
         if not data:
             return "enter valid credentials"

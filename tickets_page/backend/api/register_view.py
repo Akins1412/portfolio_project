@@ -1,20 +1,35 @@
 from flask_restx import Namespace, Resource, fields
-from backend.models.user import User
 from datetime import datetime
 from http import HTTPStatus
 
-movie_api = Namespace("movies",  description="movie list")
-post_movie = movie_api.model("post movie", {
-    "title": fields.String(required=True),
-    "description": fields.String(required=True),
-    "fee": fields.String(required=True),
+register_api = Namespace("register",  description="register a user")
+
+reg = register_api.model("register", {
+    "username": fields.String(required=True),
+    "email": fields.String(required=True),
+    "password": fields.String(required=True)
 
 })
 
 
-@movie_api.route("/")
+@register_api.route("/")
 class Return_all_movies(Resource):
     """movie routes"""
 
-    def get(self):
-        data = movie_api.payload
+    @register_api.expect(reg)
+    def post(self):
+        from backend.models.user import User
+
+        data = register_api.payload
+        if not data:
+            return "Enter a valid data", 404
+        try:
+            print(data)
+            user = User(username=data.get("username"),
+                        email=data.get("email"))
+            user.set_password(data.get("password"))
+            user.save()
+        except Exception as e:
+            return f"Error {e}"
+
+        return "Created"
