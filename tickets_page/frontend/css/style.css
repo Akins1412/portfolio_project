@@ -248,6 +248,7 @@ NOW SHOWING
 }
 
 .nshowing {
+
   background-color: black;
   color: whitesmoke;
   /* padding: 30px; */
@@ -272,7 +273,10 @@ NOW SHOWING
 
 .load {
   background-color: black;
-  padding: 9px 45%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* color: white; */
 }
 
@@ -283,10 +287,33 @@ NOW SHOWING
   text-align: center;
   outline: 5px white solid;
   font-size: 20px;
+  width: 200px;
 }
+
+.nshowing3 {
+  border: 2px solid green;
+  position: relative;
+}
+
+.hover-book {
+  background: #1a6e67;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  font-weight: 900;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
 
 .foott {
   background-color: black;
   padding: 6px;
   margin: 0;
+}
+
+.hidden {
+  display: none;
 }

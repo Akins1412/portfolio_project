@@ -1,23 +1,29 @@
 const searchInput = document.querySelector("input[name='search']");
-const url = ""
+const hover = document.querySelectorAll(".nshowing3 img");
+const book = document.querySelector(".hover-book");
 
-searchInput.addEventListener("focus", function () {
-  this.placeholder = "Enter Movie Title...";
-});
+console.log(hover)
+console.log(book)
 
-searchInput.addEventListener("blur", function () {
-  this.placeholder = "Search Movies...";
-});
 
-const ticketBtn = document.querySelector(".ticket-btn");
+hover.forEach((img) => {
+  img.addEventListener("mouseover", () => {
+    book.classList.remove("hidden");
+    // book.forEach((hov) => {
+    //   hov.classList.remove("hidden");
+    //   console.log("entred")
+    // });
+  })
+})
 
-ticketBtn.addEventListener("mouseover", function () {
-  this.style.backgroundColor = "#28a745";
-});
+hover.forEach((img) => {
+  img.addEventListener("mouseout", () => {
+    book.classList.add("hidden");
 
-ticketBtn.addEventListener("mouseout", function () {
-  this.style.backgroundColor = "#1a6e67";
-});
+    // book.forEach((hov) => {
+    //   hov.classList.remove("hidden");
+    //   console.log("entred")
+    // });
+  })
+})
 
-// FECTHING THE MOVIE
-fetch()
